@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <title>Informativo Covid-19</title>
+    <link rel="icon" href="Images/corona-4931132_1280.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <img id="Corona" src="Images/corona-4931132_1280.png" alt="">
+        <p class="Titulos">Informativo Covid-19</p>
+        <div id="Menu">
+            <nav id="menuhorizontal">
+                <a href="index.html">Página inicial</a>
+                <a href="about.html">Sobre o site</a>
+                <a href="developers.html">Desenvolvedores</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="Container">
+        <br>
+        <p class="Subtitulos">Mapas e informações acerca do novo vírus Sars-Cov-2, causador da doença Covid-19</p>
+    </div>
+
+    <div id="Apenas-ignore">
+        <div id="Caixinha">
+
+            <p class="Titulo-mapa">Mapa dos casos confirmados ao redor do mundo</p>
+            <div id="mapa-mundi"></div>
+            <div class="Texto">
+                <p>
+                    Este mapa-múndi mostra todos os casos confirmados de Covid-19 por país. A cor mais clara
+                    representa os países com menos casos, a mais escura, os países com mais casos confirmados.
+                </p>
+            </div>
+            <p class="Referencias">As informações apresentadas no mapa podem ser acessadas em:
+                <a href="https://covid19-brazil-api.vercel.app/api/report/v1/countries" class="Link">
+                    https://covid19-brazil-api.vercel.app/api/report/v1/countries</a>
+            </p>
+        </div>
+
+        <!-- --------------------------------------- -->
+
+        <div id="Caixinha2">
+            <div id="Grafico"></div>
+            <div class="Texto">
+                <p>
+                    Este gráfico mostra a porcentagem de todos os casos confirmados de Covid-19 em relação aos óbitos. A
+                    porcentagem óbitos mostra a taxa de letalidade da doença.
+                </p>
+            </div>
+            <p class="Referencias">As informações apresentadas no gráfico podem ser acessadas em:
+                <a href="https://covid19-brazil-api.vercel.app/api/report/v1/countries" class="Link">
+                    https://covid19-brazil-api.vercel.app/api/report/v1/countries</a>
+            </p>
+        </div>
+
+        <!-- --------------------------------------- -->
+
+        <div id="Tabela">
+
+            <table id="tabela-dados">
+                <div class="Texto">
+                    <p>
+                        Esta tabela mostra especificamente dados das unidades federativas do Brasil. Entre eles estão
+                        os:
+                        casos confirmados, óbitos, suspeitos e descartados.
+                    </p>
+                </div>
+                <thead>
+                    <tr>
+                        <th>Unidade Federativa</th>
+                        <th>Estado</th>
+                        <th>Casos</th>
+                        <th>Óbitos</th>
+                        <th>Suspeitos</th>
+                        <th>Descartados</th>
+                    </tr>
+                </thead>
+                <tbody id="linhas"></tbody>
+            </table>
+
+            <p class="Referencias">As informações apresentadas no gráfico podem ser acessadas em:
+                <a href="https://covid19-brazil-
+                api.now.sh/api/report/v1" class="Link">
+                    https://covid19-brazil-
+                    api.now.sh/api/report/v1</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="div-erro">Infelizmente não foi possível carregar os dados do site. Tente novamente mais tarde, se o
+        problema
+        persistir, comunique os desenvolvedores do site.
+    </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="JS/script.js"></script>
+
+
+</html>
