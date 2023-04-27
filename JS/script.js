@@ -33,7 +33,7 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable(dadosMapa);
 
-    var options = {backgroundColor:'#64e2FF', colorAxis: {colors: ['#4faff8', 'blue']}};
+    var options = { backgroundColor: '#64e2FF', colorAxis: { colors: ['#4faff8', 'blue'] } };
 
     var chart = new google.visualization.GeoChart(document.getElementById('mapa-mundi'));
 
@@ -56,6 +56,9 @@ function drawChart() {
     var options = {
         title: 'Porcentagem de casos e mortes por Covid-19',
         pieHole: 0.4,
+        backgroundColor: '5CB4FF',
+        colors:['223cc2','black'],
+        
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('Grafico'));
@@ -66,21 +69,21 @@ function drawChart() {
 async function carregarDadosGrafico() {
     const divErro = document.getElementById('div-erro');
     divErro.style.display = 'none';
-    
+
     await fetch('https://covid19-brazil-api.vercel.app/api/report/v1/countries')   //Endpoint da API
-        .then( response => response.json() )    // Obtendo resposta da API
-        .then( dados => prepararDadosGrafico(dados) )  // Obtendo os dados
-        .catch( e => exibirErro(e.message) );   // Obtendo erro (se der erro)
-  }
+        .then(response => response.json())    // Obtendo resposta da API
+        .then(dados => prepararDadosGrafico(dados))  // Obtendo os dados
+        .catch(e => exibirErro(e.message));   // Obtendo erro (se der erro)
+}
 
 function prepararDadosGrafico(dados) {
 
     dadosPizza = [['Dados', 'valor']]
     let mortes = 0;
     let confirmados = 0;
-    for (let i = 0; i<dados['data'].length; i++) {
+    for (let i = 0; i < dados['data'].length; i++) {
         mortes += dados['data'][i].deaths;
-        confirmados+= dados['data'][i].confirmed;
+        confirmados += dados['data'][i].confirmed;
     }
     console.log(mortes);
     console.log(confirmados);
@@ -95,18 +98,18 @@ async function carregarDadosTabela() {
     // ocultar a div de erro (se estiver visível)
     const divErro = document.getElementById('div-erro');
     divErro.style.display = 'none';
-    
+
     await fetch('https://covid19-brazil-api.vercel.app/api/report/v1')   //Endpoint da API
-        .then( response => response.json() )    // Obtendo resposta da API
-        .then( dadosTabela => prepararDadosTabela(dadosTabela) )  // Obtendo os dados
-        .catch( e => exibirErro(e.message) );   // Obtendo erro (se der erro)
+        .then(response => response.json())    // Obtendo resposta da API
+        .then(dadosTabela => prepararDadosTabela(dadosTabela))  // Obtendo os dados
+        .catch(e => exibirErro(e.message));   // Obtendo erro (se der erro)
 }
 
 // Função para exibir mensagens de erro
 function exibirErro(mensagem) {
     const divErro = document.getElementById('div-erro');
     divErro.style.display = 'block';
-    divErro.innerHTML = '<b>Erro ao acessar a API</b><br />' + mensagem; 
+    divErro.innerHTML = '<b>Erro ao acessar a API</b><br />' + mensagem;
 }
 
 // Função para preparar e exibir os dados no HTML
@@ -114,23 +117,23 @@ function prepararDadosTabela(dadosTabela) {
     // Criando variável para controlar as linhas da tbody
     let linhas = document.getElementById('linhas');
     linhas.innerHTML = '';
-    
+
     // Laço para percorrer todos os dados recebidos
-    for (let i=0; i<dadosTabela['data'].length; i++) {
+    for (let i = 0; i < dadosTabela['data'].length; i++) {
         let auxLinha = '';
 
-        if (i %2 !=0)
+        if (i % 2 != 0)
             auxLinha = '<tr class="listra">';
-        else 
+        else
             auxLinha = '<tr>';
 
         auxLinha += '<td>' + dadosTabela['data'][i].uf + '</td>' +
-                    '<td>' + dadosTabela['data'][i].state + '</td>' +
-                    '<td>' + dadosTabela['data'][i].cases + '</td>' +
-                    '<td>' + dadosTabela['data'][i].deaths + '</td>' +
-                    '<td>' + dadosTabela['data'][i].suspects + '</td>' +
-                    '<td>' + dadosTabela['data'][i].refuses + '</td>' +
-                '</tr>';
+            '<td>' + dadosTabela['data'][i].state + '</td>' +
+            '<td>' + dadosTabela['data'][i].cases + '</td>' +
+            '<td>' + dadosTabela['data'][i].deaths + '</td>' +
+            '<td>' + dadosTabela['data'][i].suspects + '</td>' +
+            '<td>' + dadosTabela['data'][i].refuses + '</td>' +
+            '</tr>';
 
         linhas.innerHTML += auxLinha;
     }
@@ -138,13 +141,13 @@ function prepararDadosTabela(dadosTabela) {
 
 
 function exibirErro(mensagerm) {
-    
+
 }
 
-document.addEventListener(  "DOMContentLoaded",
-                            function(event) {
-                                carregarDados();
-                                carregarDadosGrafico();
-                                carregarDadosTabela();
-                            }
+document.addEventListener("DOMContentLoaded",
+    function (event) {
+        carregarDados();
+        carregarDadosGrafico();
+        carregarDadosTabela();
+    }
 );
