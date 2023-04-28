@@ -250,7 +250,7 @@ table {
     justify-content: left;
 }
 
-#objetivo {
+#objetivo, #links {
     margin: 20px 2.5% 20px 20%  ;
     display: flex;
     flex-direction: column;
@@ -275,4 +275,65 @@ table {
     border-radius: 0 10px 10px 0;
     border-left: #223cc2 solid 7px;
     border-bottom: #223cc2 solid 6px;
+}
+
+.SubSubtitulos{
+    background-color: #cbdeff;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* ================================================================================ */
+
+/* Programando a página Desenvolvedores */
+
+#desenvolvedor {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #1e84d2;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: auto;
+}
+
+
+
+#Professores {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #1e84d2;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: auto;
+}
+
+.tituloDevs {
+    background-color: #1e84d2;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #151618;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.Nomes {
+    background-color: #ced5df;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #595d61;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.Pessoas {
+    background-color: #8eb6f7;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
 }
