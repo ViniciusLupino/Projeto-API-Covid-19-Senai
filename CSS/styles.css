@@ -230,7 +230,6 @@ table {
     color: rgb(0, 0, 0);
 }
 
-
 /* ================================================================================ */
 
 /* Programando a página Sobre o Site */
@@ -240,7 +239,7 @@ table {
     flex-direction: column;
     margin: auto;
     justify-content: space-around;
-    
+
 }
 
 #descricao {
@@ -250,14 +249,15 @@ table {
     justify-content: left;
 }
 
-#objetivo, #links {
-    margin: 20px 2.5% 20px 20%  ;
+#objetivo,
+#links {
+    margin: 20px 2.5% 20px 20%;
     display: flex;
     flex-direction: column;
     justify-content: left;
     background-color: #8eb6f7;
     padding: 10px;
-    border-radius: 10px 0 ;
+    border-radius: 10px 0;
     border-right: #223cc2 solid 7px;
     border-bottom: #223cc2 solid 6px;
 }
@@ -277,7 +277,7 @@ table {
     border-bottom: #223cc2 solid 6px;
 }
 
-.SubSubtitulos{
+.SubSubtitulos {
     background-color: #cbdeff;
     padding: 10px 20px;
     border-radius: 25px;
@@ -296,8 +296,6 @@ table {
     margin: 20px auto;
     width: auto;
 }
-
-
 
 #Professores {
     display: flex;
@@ -337,3 +335,172 @@ table {
     display: flex;
     flex-direction: column;
 }
+
+.Referencias {
+    font-size: 10px;
+}
+
+.Referencias a {
+    font-size: 10px;
+}
+
+@media (max-width: 767px) {
+
+    body {
+        width: 100vw;
+        display: flex;
+    }
+
+    header {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    th {
+        background-color: #1e84d2;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    td {
+        padding: 2px !important;
+        border: #cbdeff solid;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    #Corona {
+        display: flex;
+        margin: 0;
+        width: 25%;
+    }
+
+    .Titulos {
+        font-size: 18px;
+        text-align: center;
+        width: 50%;
+        display: flex;
+        margin: 2px !important;
+        padding: 0;
+    }
+
+    .Subtitulos {
+        font-size: 15px;
+    }
+
+    .Texto {
+        font-size: 12px;
+    }
+
+    #Menu {
+        border: 0;
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #menuhorizontal a {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #desenvolvedor,
+    #Professores {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .tituloDevs {
+        width: auto;
+        font-size: 15px;
+    }
+
+    #objetivo,
+    #links,
+    #tecnologias,
+    #descricao {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #8eb6f7;
+        padding: 10px;
+        border-radius: 10px 0;
+        border: solid #223cc2 7px;
+
+    }
+
+    #Apenas-ignore {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #mapa-mundi {
+        width: 90%;
+    }
+
+    #Caixinha2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        margin: auto;
+    }
+
+    #Grafico {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #tabela-dados {
+        text-align: center;
+        margin-top: 10px;
+        background-color: #3e53bb;
+        font-size: small;
+        padding: 0;
+        font-size: 9px;
+        width: 50%;
+        margin: auto;
+    }
+
+    #Tabela {
+        background-color: #3e53bb;
+        width: auto;
+        margin: 5px auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: center;
+        padding: 3px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    th {
+        padding: 1px;
+        font-size: 9px;
+    }
+}
+
+/* Cabô, graças a Deus */
